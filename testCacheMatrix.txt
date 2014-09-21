@@ -1,0 +1,13 @@
+source("E:/GitHub/ProgrammingAssignment2/cachematrix.R")
+A = data.matrix(c(9,16,121,25))
+dim(A) <- c(2,2)
+solve(A)
+u=makeCacheMatrix(A)
+u$set(A)
+message("first call to cacheSolve")
+cacheSolve(u)
+message("second call to cacheSolve")
+cacheSolve(u)
+message("third call to cacheSolve")
+cacheSolve(u)
+
